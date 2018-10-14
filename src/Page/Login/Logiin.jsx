@@ -14,6 +14,9 @@ class Login extends Component{
             password:''
         };
         this.getInputUserName = this.getInputUserName.bind(this);
+        this.getInputUserName = this.getInputUserName.bind(this);
+        this.getInputUserName = this.getInputUserName.bind(this);
+        this.getInputUserName = this.getInputUserName.bind(this);
     }
     loginIn() {
         console.log(`userName--${this.state.userName}--password---${this.state.password}`)
