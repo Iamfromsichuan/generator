@@ -3,7 +3,7 @@ import './Login.css'
 import { Flex, WhiteSpace } from 'antd-mobile';
 import LoginButton from "../../component/Login/LoginButton";
 import Input from "../../component/Login/Input";
-
+let fetch = require('node-fetch');
 class Login extends Component{
     constructor(...args) {
         super(...args)
@@ -14,12 +14,24 @@ class Login extends Component{
             password:''
         };
         this.getInputUserName = this.getInputUserName.bind(this);
-        this.getInputUserName = this.getInputUserName.bind(this);
-        this.getInputUserName = this.getInputUserName.bind(this);
-        this.getInputUserName = this.getInputUserName.bind(this);
+        this.getInputPassword = this.getInputPassword.bind(this);
     }
     loginIn() {
         console.log(`userName--${this.state.userName}--password---${this.state.password}`)
+        function* gen(){
+            let url = 'https://api.github.com/users/github';
+            let result = yield fetch(url);
+            console.log(result.bio);
+        }
+        let g = gen();
+        let result = g.next();
+        console.log("----------------")
+        console.log(result)
+        result.value.then(function(data){
+            return data.json();
+        }).then(function(data){
+            g.next(data);
+        });
     }
     getInputUserName(x) {
         this.setState({

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import {Route } from 'react-router-dom';
 import Home from "./Page/Home/Home";
 import Login from "./Page/Login/Logiin";
 
@@ -14,7 +14,7 @@ const routes =  [
         path: "/home",
         component: Home
     }
-]
+];
 const RouteWithSubRoutes = route => (
     <Route
         path={route.path}

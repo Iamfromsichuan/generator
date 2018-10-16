@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-import { List, InputItem, WhiteSpace } from 'antd-mobile';
+import { List, InputItem, WhiteSpace } from 'antd';
 
 
 class Input extends Component{
