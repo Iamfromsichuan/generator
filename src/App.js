@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import {BrowserRouter as Router,Link,Route,Switch} from 'react-router-dom'
-import { Button } from 'antd-mobile';
+import { Button } from 'antd';
 import Login from "./Page/Login/Logiin";
 
 class First extends Component{
